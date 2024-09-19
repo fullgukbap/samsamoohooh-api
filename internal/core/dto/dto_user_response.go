@@ -28,7 +28,7 @@ func NewCreateUserResponse(user domain.User) (res *CreateUserResponse) {
 
 	// if deletedAt is not null
 	if user.DeletedAt.Valid {
-		res.DeletedAt = user.UpdatedAt.Format(DeletedAtFormat)
+		res.DeletedAt = user.DeletedAt.Time.Format(DeletedAtFormat)
 	}
 
 	return res
