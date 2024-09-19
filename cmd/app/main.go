@@ -4,6 +4,8 @@ import (
 	"log"
 	"samsamoohooh-mini-api/internal/infra/config"
 	"samsamoohooh-mini-api/internal/infra/logger"
+
+	"go.uber.org/zap"
 )
 
 func main() {
@@ -20,11 +22,10 @@ func main() {
 
 	config, err := config.New("./toml")
 	if err != nil {
-		logger.Panicw(
+		logger.Panic(
 			"config 생성에 실패하였습니다",
-			"error", err,
+			zap.Error(err),
 		)
 	}
 	_ = config
-
 }
