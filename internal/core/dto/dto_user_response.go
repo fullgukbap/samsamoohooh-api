@@ -34,7 +34,7 @@ func NewCreateUserResponse(user domain.User) (res *CreateUserResponse) {
 	return res
 }
 
-type GetUserByIDResponse struct {
+type GetUserResponse struct {
 	ID         uint              `json:"id"`
 	Name       string            `json:"name"`
 	Resolution string            `json:"resolution"`
@@ -46,8 +46,8 @@ type GetUserByIDResponse struct {
 	DeletedAt  string            `json:"deletedAt"`
 }
 
-func NewGetUserByIDResponse(user domain.User) (res *GetUserByIDResponse) {
-	res = &GetUserByIDResponse{
+func NewGetUserResponse(user domain.User) (res *GetUserResponse) {
+	res = &GetUserResponse{
 		ID:         user.ID,
 		Name:       user.Name,
 		Resolution: user.Resolution,

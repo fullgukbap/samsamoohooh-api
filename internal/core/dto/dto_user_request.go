@@ -19,3 +19,15 @@ func (dto CreateUserRequest) ToDomain() *domain.User {
 		Social:     dto.Soical,
 	}
 }
+
+type UpdateUserRequest struct {
+	Name       string `json:"name"`
+	Resolution string `json:"resolution"`
+}
+
+func (dto UpdateUserRequest) ToDomain() *domain.User {
+	return &domain.User{
+		Name:       dto.Name,
+		Resolution: dto.Resolution,
+	}
+}
