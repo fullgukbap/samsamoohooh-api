@@ -14,7 +14,7 @@ type CreateUserResponse struct {
 	DeletedAt  string            `jsno:"deletedAt"`
 }
 
-func NewCreateUserResponse(user domain.User) (res *CreateUserResponse) {
+func NewCreateUserResponse(user *domain.User) (res *CreateUserResponse) {
 	res = &CreateUserResponse{
 		ID:         user.ID,
 		Name:       user.Name,
@@ -46,7 +46,7 @@ type GetUserResponse struct {
 	DeletedAt  string            `json:"deletedAt"`
 }
 
-func NewGetUserResponse(user domain.User) (res *GetUserResponse) {
+func NewGetUserResponse(user *domain.User) (res *GetUserResponse) {
 	res = &GetUserResponse{
 		ID:         user.ID,
 		Name:       user.Name,
@@ -77,7 +77,7 @@ type UpdateUserResponse struct {
 	DeletedAt  string            `json:"deletedAt"`
 }
 
-func NewUpdateUserResponse(user domain.User) (res *UpdateUserResponse) {
+func NewUpdateUserResponse(user *domain.User) (res *UpdateUserResponse) {
 	res = &UpdateUserResponse{
 		ID:         user.ID,
 		Name:       user.Name,
