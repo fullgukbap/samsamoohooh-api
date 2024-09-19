@@ -15,7 +15,7 @@ type Config struct {
 		Database        string
 		MaxIdleConns    int
 		MaxOpenConns    int
-		ConnMaxLifeTime int
+		ConnMaxLifeTime string
 	}
 
 	Token struct {
