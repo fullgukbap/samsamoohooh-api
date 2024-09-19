@@ -2,6 +2,7 @@ package main
 
 import (
 	"log"
+	"samsamoohooh-mini-api/internal/adapter/persistence/sql/database"
 	"samsamoohooh-mini-api/internal/infra/config"
 	"samsamoohooh-mini-api/internal/infra/logger"
 
@@ -27,5 +28,22 @@ func main() {
 			zap.Error(err),
 		)
 	}
-	_ = config
+
+	db, err := database.NewDatabase(config)
+	if err != nil {
+		logger.Panic(
+			"database 생성에 실패하였습니다",
+			zap.Error(err),
+		)
+	}
+
+	err = database.AutoMigrate(db)
+	if err != nil {
+		logger.Panic(
+			"database migration을 완료하지 못했습니다",
+			zap.Error(err),
+		)
+	}
+
+	_ = db
 }
