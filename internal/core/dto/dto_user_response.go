@@ -14,8 +14,8 @@ type CreateUserResponse struct {
 	DeletedAt  string            `jsno:"deletedAt"`
 }
 
-func NewCreateUserResponseFromDomain(user domain.User) (res CreateUserResponse) {
-	res = CreateUserResponse{
+func NewCreateUserResponse(user domain.User) (res *CreateUserResponse) {
+	res = &CreateUserResponse{
 		ID:         user.ID,
 		Name:       user.Name,
 		Resolution: user.Resolution,
