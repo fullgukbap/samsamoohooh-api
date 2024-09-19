@@ -24,5 +24,5 @@ type User struct {
 	Resolution string
 	Role       RoleType
 	Sub        string
-	Social     string
+	Social     SocialType
 }
