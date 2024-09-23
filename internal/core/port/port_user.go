@@ -1,8 +1,8 @@
 package port
 
 import (
-	"samsamoohooh-mini-api/internal/core/domain"
-	"samsamoohooh-mini-api/internal/core/dto"
+	"samsamoohooh-api/internal/core/domain"
+	"samsamoohooh-api/internal/core/dto"
 )
 
 type UserService interface {

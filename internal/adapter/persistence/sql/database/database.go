@@ -2,7 +2,7 @@ package database
 
 import (
 	"fmt"
-	"samsamoohooh-mini-api/internal/infra/config"
+	"samsamoohooh-api/internal/infra/config"
 	"time"
 
 	"gorm.io/driver/mysql"

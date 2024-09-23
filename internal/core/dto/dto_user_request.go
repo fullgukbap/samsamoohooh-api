@@ -1,6 +1,6 @@
 package dto
 
-import "samsamoohooh-mini-api/internal/core/domain"
+import "samsamoohooh-api/internal/core/domain"
 
 type CreateUserRequest struct {
 	Name       string            `json:"name" validate:"gte=6,lte=18"`

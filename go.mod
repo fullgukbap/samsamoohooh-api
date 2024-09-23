@@ -1,4 +1,4 @@
-module samsamoohooh-mini-api
+module samsamoohooh-api
 
 go 1.22.5
 

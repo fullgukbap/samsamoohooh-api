@@ -1,6 +1,6 @@
 package dto
 
-import "samsamoohooh-mini-api/internal/core/domain"
+import "samsamoohooh-api/internal/core/domain"
 
 type CreateUserResponse struct {
 	ID         uint              `json:"id"`
