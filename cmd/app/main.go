@@ -2,9 +2,9 @@ package main
 
 import (
 	"log"
-	"samsamoohooh-mini-api/internal/adapter/persistence/sql/database"
-	"samsamoohooh-mini-api/internal/infra/config"
-	"samsamoohooh-mini-api/internal/infra/logger"
+	"samsamoohooh-api/internal/adapter/persistence/sql/database"
+	"samsamoohooh-api/internal/infra/config"
+	"samsamoohooh-api/internal/infra/logger"
 
 	"go.uber.org/zap"
 )
